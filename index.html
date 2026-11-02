@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReneeMart</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <h1>🛒ReneeMart</h1>
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+
+        <a href="products.html">Products</a>
+
+        <a href="cart.html">
+          <i class="fa-solid fa-cart-shopping"></i>
+          Cart
+          <span id="cart-count">0</span>
+        </a>
+
+        <a href="register.html">Register</a>
+
+        <a href="contact.html">Contact</a>
+
+        <a href="https://wa.me/233598044663" target="_blank"
+          >WhatsApp</a
+        >
+      </nav>
+    </header>
+</section>
+
+    <section class="hero">
+      <h2>Welcome to ReneeMart</h2>
+
+      <p>
+        Your trusted online shopping destination for quality products at
+        affordable prices.
+      </p>
+
+      <input type="text" placeholder="Search products..." id="search" />
+      <button onclick="openImage('images/background2.jpg')">
+🔍 View Collection
+</button>
+
+      <button>Search</button>
+    </section>
+
+    <section class="categories">
+      <h2>Categories</h2>
+
+      <div class="category-box">
+        <div class="category">
+          👕
+          <h3>Fashion</h3>
+        </div>
+
+        <div class="category">
+          👟
+          <h3>Shoes</h3>
+        </div>
+
+        <div class="category">
+          ⌚
+          <h3>Watches</h3>
+        </div>
+
+        <div class="category">
+          🎒
+          <h3>Bags</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="products">
+      <h2>Featured Products</h2>
+      <!-- Image Popup -->
+
+<div id="imageModal" class="modal"
+onclick="closeImage()">
+
+<span class="close" onclick="closeImage()">&times;</span>
+
+<img id="popupImage">
+
+</div>
+      <div class="product-container">
+        <div class="card">
+          <img src="images/shoe.jpg" alt="shoe" 
+          onclick="openImage(this.src)">
+
+          <h3>Nike Sneakers</h3>
+
+          <p>GH₵250</p>
+
+          <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="images/shirt.jpg" alt="shirt"
+          onclick="openImage(this.src)"> 
+          <h3>White T-Shirt</h3>
+
+          <p>GH₵120</p>
+
+          <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="images/watch.jpg" alt="watch"
+          onclick="openImage(this.src)">
+          <h3>POEDAGAR</h3>
+
+          <p>GH₵1000</p>
+
+          <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="images/bag.jpg" alt="bag"
+          onclick="openImage(this.src)">
+
+          <h3>Luxury bag</h3>
+
+          <p>GH₵400</p>
+
+          <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="images/shoe2.jpg" alt="shoe"
+          onclick="openImage(this.src)">
+
+          <h3>Puma Runner</h3>
+
+          <p>GH₵270</p>
+
+          <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="images/shoe3.jpg" alt="shoe" 
+          onclick="openImage(this.src)">
+
+          <h3>Nike Air Max</h3>
+
+          <p>GH₵600</p>
+
+          <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="images/shoe4.jpg" alt="shoe" 
+          onclick="openImage(this.src)">
+
+          <h3>Adidas Superstar</h3>
+
+          <p>GH₵300</p>
+
+          <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="images/shirt2.jpg" alt="shirt" 
+          onclick="openImage(this.src)">
+          <h3>Black Polo</h3>
+
+          <p>GH₵80</p>
+
+          <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="images/shirt3.jpg" alt="shirt"
+          onclick="openImage(this.src)">
+
+          <h3>Blue Hoodie</h3>
+
+          <p>GH₵180</p>
+
+          <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="images/shirt4.jpg" alt="shirt" 
+          onclick="openImage(this.src)">
+
+          <h3>Floral Print Shirt</h3>
+
+          <p>GH₵800</p>
+
+          <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="images/bag2.jpg" alt="bag" 
+          onclick="openImage(this.src)">
+
+          <h3>Gucci bag</h3>
+
+          <p>GH₵1500</p>
+
+          <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="images/bag3.jpg" alt="bag" 
+          onclick="openImage(this.src)">
+
+          <h3>Travel bag</h3>
+
+          <p>GH₵200</p>
+
+          <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="images/bag4.jpg" alt="bag"
+          onclick="openImage(this.src)">
+
+          <h3>Loius Vitton</h3>
+
+          <p>GH₵500</p>
+
+          <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="images/watch2.jpg" alt="watch" 
+           onclick="openImage(this.src)">
+
+          <h3>Audemars Piguet Royal Oak Sand</h3>
+
+          <p>GH₵3000</p>
+
+          <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="images/watch3.jpg" alt="watch" 
+          onclick="openImage(this.src)">
+
+          <h3>Rolex Daytona Watch</h3>
+
+          <p>GH₵5000</p>
+
+          <button onclick="addCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="images/watch4.jpg" alt="watch" 
+          onclick="openImage(this.src)">
+
+          <h3>Smart Watch</h3>
+
+          <p>GH₵350</p>
+
+          <button onclick="addCart()">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="recommend">
+      <h2>🤖 AI Product Recommendation</h2>
+
+      <p>
+        Our AI analyzes popular shopping trends and customer preferences to
+        recommend products you may like.
+      </p>
+    </section>
+
+    <footer>
+      <p>©2026 ReneeMart. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
